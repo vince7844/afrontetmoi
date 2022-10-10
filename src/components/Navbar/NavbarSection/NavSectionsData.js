@@ -1,7 +1,7 @@
-import candidates from '../../assets/icons/candidates.png';
-import profil from '../../assets/icons/profil.png';
-import projects from '../../assets/icons/projects.png';
-import tests from '../../assets/icons/tests.png';
+import candidates from '../../../assets/icons/candidates.png';
+import profil from '../../../assets/icons/profil.png';
+import projects from '../../../assets/icons/projects.png';
+import tests from '../../../assets/icons/tests.png';
 
 export const navSections = [
   {
