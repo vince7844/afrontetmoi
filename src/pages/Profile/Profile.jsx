@@ -36,7 +36,7 @@ const Profile = () => {
     <div className="profile">
       <h1 className='text-center text-3xl'>Mon profil</h1>
       <form onSubmit={handleSubmit((data) => setUserProfile({...data, userPicture: randomPicture}))} className='flex justify-center my-12'>
-        <div className='grid gap-6 grid-cols-1'>
+        <div className='grid gap-6 grid-cols-1 bg-[#f5f5f5] rounded p-10'>
           {
            Object.entries(userProfile).map((entry, id) => { 
               let userProfileKey = entry[0];
@@ -53,7 +53,7 @@ const Profile = () => {
             })
           }
           <div className='flex flex-col'>
-            <label>Poste</label>
+            <label className='text-lg'>Poste</label>
             <select {...register("userPosition")} className='p-3 rounded'>
               <option value="Ressource Humaine">Ressource Humaine</option>
               <option value="Commercial">Commercial</option>
@@ -61,13 +61,13 @@ const Profile = () => {
             </select>
           </div>
           <div className='photo'>
-            <label>Photo</label>
+            <label className='text-lg'>Photo</label>
             <div className='flex'>
               <img {...register("userPicture")} src={changePicture && !loading ? randomPicture : userProfile.userPicture} alt='profil' width={100} />
               <button onClick={handleClickChangePicture} type="button" className="bg-slate-200 px-2 rounded h-12 self-center ml-5">Changer</button>
             </div>
           </div>
-          <input className='bg-[#2621F3] text-white w-36 rounded mt-6 mx-auto py-2 cursor-pointer' type="submit" value="Enregistrer" />
+          <input className='bg-[#2621F3] text-white w-36 rounded mt-4 mx-auto py-2 cursor-pointer' type="submit" value="Enregistrer" />
         </div>
       </form>
     </div>

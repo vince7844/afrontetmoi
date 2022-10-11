@@ -18,7 +18,7 @@ const FormInput = ({ profileKey, profileValue, register, required }) => {
 
   return (
     <div ref={inputRef} className='flex flex-col w-200'>
-      <label>{ renderLabel(profileKey) }</label>
+      <label className='text-lg'>{ renderLabel(profileKey) }</label>
       <input 
         { ...register(profileKey, { required }) }
         type="text" 
