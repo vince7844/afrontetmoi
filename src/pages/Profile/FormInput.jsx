@@ -22,7 +22,7 @@ const FormInput = ({ profileKey, profileValue, register, required }) => {
       <input 
         { ...register(profileKey, { required }) }
         type="text" 
-        className='border border-slate-800 w-96' 
+        className='border border-slate-600 w-96 p-2 rounded' 
         defaultValue={profileValue} 
       />
     </div>  
