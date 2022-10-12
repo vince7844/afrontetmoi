@@ -8,26 +8,19 @@ import { useState } from 'react';
 const Profile = () => {
   const { userProfile, setUserProfile } = useContext(AppContext);
   const [randomPicture, setRandomPicture] = useState('')
-  const [loading, setLoading] = useState(false)
   const [changePicture, setChangePicture] = useState(false)
   const { register, handleSubmit } = useForm();
 
-  useEffect(() => {
-    handleClickChangePicture()
-  }, [])
-
   const handleClickChangePicture = () => {
-    setLoading(true)
+    setChangePicture(true)
     const headers = {
       'X-RapidAPI-Key': 'aab1cf72f3mshde38d7c2845413dp12fb3ajsn26eff76ab571',
       'X-RapidAPI-Host': 'random-user.p.rapidapi.com'
     }
     axios.get('https://random-user.p.rapidapi.com/getuser', {headers})
-    .then(res => setRandomPicture(res.data.results[0].picture.medium))
-    .catch(err => console.log(err))
-    setChangePicture(true)
-    setLoading(false)
-  } 
+         .then(res => setRandomPicture(res.data.results[0].picture.medium))
+         .catch(err => console.log(err))
+  }   
 
   return (
     <div className="profile">
@@ -60,7 +53,7 @@ const Profile = () => {
           <div className='photo'>
             <label className='text-lg'>Photo</label>
             <div className='flex'>
-              {loading ? <h4>Loading...</h4> : <img {...register("userPicture")} src={changePicture ? randomPicture : userProfile.userPicture} alt='profil' width={100} />}
+              {randomPicture === "" && changePicture ? <h4>Loading...</h4> : <img {...register("userPicture")} src={changePicture ? randomPicture : userProfile.userPicture} alt='profil' width={100} />}
               <button onClick={handleClickChangePicture} type="button" className="bg-slate-200 px-2 rounded h-12 self-center ml-5">Changer</button>
             </div>
           </div>
