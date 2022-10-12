@@ -19,7 +19,7 @@ function App() {
   return (
     <AppContext.Provider value={{ userProfile, setUserProfile }}>
       <div className='flex'>
-        <div className='flex-2'>
+        <div>
           <Navbar />
         </div>
         <div className='flex-1 m-10'>

@@ -10,7 +10,7 @@ const Navbar = () => {
   const { userProfile } = useContext(AppContext)
 
   return (
-    <nav className='h-full p-6 bg-[#f5f5f5]'>
+    <nav className='h-screen p-6 bg-[#f5f5f5]'>
       <Link to='/'>
         <img width={250} className="p-10 m-auto" src={logo} alt="logo" />
       </Link>
