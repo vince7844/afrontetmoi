@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <h1 className='text-center text-xl font-bold mb-10'>Bienvenue sur A-Front-Et-Moi !</h1>
+      <h1 className='mb-10'>Bienvenue sur A-Front-Et-Moi !</h1>
       <p>Cette plateforme a été conçu pour vous, les RH passionnés de recrutement tech 😍 
         vous pourrez enfin séléctionner le meilleur candidat pour un poste en développement Front-end (tous niveaux).</p>
       <br />

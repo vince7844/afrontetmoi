@@ -24,7 +24,7 @@ const Profile = () => {
 
   return (
     <div className="profile">
-      <h1 className='text-center text-3xl'>Mon profil</h1>
+      <h1>Mon profil</h1>
       <form onSubmit={handleSubmit((data) => setUserProfile({...data, userPicture: randomPicture}))} className='flex justify-center my-12'>
         <div className='grid gap-6 grid-cols-1 bg-[#f5f5f5] rounded p-10'>
           {
