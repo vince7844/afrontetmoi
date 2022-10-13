@@ -17,7 +17,7 @@ export const navSections = [
   {
     sectionIcon: tests,
     sectionName: "Sessions de test",
-    sectionPath: "/tests"
+    sectionPath: "/testing-sessions"
   },
   {
     sectionIcon: projects,

@@ -16,6 +16,9 @@ h1, h2 {
   font-weight: normal;
 } 
 
-p, h1, h2, h3, h4, h5 {
-  margin: 0;
+h1 {
+  font-size: 1.875rem/* 30px */;
+  line-height: 2.25rem/* 36px */;
+  text-align: center;
+  margin: 3rem 0;
 }

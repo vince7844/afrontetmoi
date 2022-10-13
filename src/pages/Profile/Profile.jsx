@@ -4,6 +4,7 @@ import FormInput from './FormInput';
 import { AppContext } from '../../App';
 import axios from 'axios';
 import { useState } from 'react';
+import { COLOR } from '../../assets/colors/constant.colors';
 
 const Profile = () => {
   const { userProfile, setUserProfile } = useContext(AppContext);
@@ -25,8 +26,8 @@ const Profile = () => {
   return (
     <div className="profile">
       <h1>Mon profil</h1>
-      <form onSubmit={handleSubmit((data) => setUserProfile({...data, userPicture: randomPicture}))} className='flex justify-center my-12'>
-        <div className='grid gap-6 grid-cols-1 bg-[#f5f5f5] rounded p-10'>
+      <form onSubmit={handleSubmit((data) => setUserProfile({...data, userPicture: randomPicture}))} className='flex justify-center mb-12'>
+        <div className={`grid gap-6 grid-cols-1 bg-[${COLOR.lightgray}] rounded p-10`}>
           {
            Object.entries(userProfile).map((entry, id) => { 
               let userProfileKey = entry[0];

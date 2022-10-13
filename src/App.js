@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import { Home, Profile, Candidates, Tests, Projects } from './pages'
+import { Home, Profile, Candidates, TestingSessions, Projects } from './pages'
 import { createContext, useState } from 'react';
 import memberPicture from './assets/pictures/members/philipp.jpg'
 
@@ -19,15 +19,13 @@ function App() {
   return (
     <AppContext.Provider value={{ userProfile, setUserProfile }}>
       <div className='flex'>
-        <div>
-          <Navbar />
-        </div>
-        <div className='flex-1 m-10'>
+        <Navbar />
+        <div className='flex-1'>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/candidates" element={<Candidates />} />
-            <Route path="/tests" element={<Tests />} />
+            <Route path="/testing-sessions" element={<TestingSessions />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
