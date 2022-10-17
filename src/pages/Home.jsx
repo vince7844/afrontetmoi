@@ -12,7 +12,7 @@ const Home = () => {
       <br />  
       <p>Un petit tuto vidéo ? c'est partie !</p>  
       <br />
-      <p>****video****</p>
+      <p>**video**</p>
     </div>
   )
 }
