@@ -4,64 +4,64 @@ export const sessionsData = [
     participants: [
       {
         name: 'Paul Drucker',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/men/35.jpg'
       },
       {
         name: 'Pierre Benoit',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/men/27.jpg'
       },
       {
         name: 'Lucie Deckovill',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/women/76.jpg'
       },
       {
         name: 'Jaques Suivent',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/men/52.jpg'
       },
       {
-        name: 'Abraham Movich',
-        picture: ''
+        name: 'Benjamin Movich',
+        picture: 'https://randomuser.me/api/portraits/men/32.jpg'
       },
       {
         name: 'Stephanie Espielle',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/women/65.jpg'
       }
     ],
-    date_debut: 'ABC',
-    date_fin: 'DEF'
+    date_debut: '15/04/2022',
+    date_fin: '18/04/2022'
   },
   {
     name: 'Lead développeur front-end (+ 5ans d\'xp)',
     participants: [
       {
-        name: 'Abraham Movich',
-        picture: ''
+        name: 'Benjamin Movich',
+        picture: 'https://randomuser.me/api/portraits/men/32.jpg'
       },
       {
         name: 'Stephanie Espielle',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/women/65.jpg'
       }
     ],
-    date_debut: 'ABC',
-    date_fin: 'DEF'
+    date_debut: '18/04/2022',
+    date_fin: '30/04/2022'
   },
   {
     name: 'Développeur mid front-end (2 à 3 ans d\'xp)',
     participants: [
       {
-        name: 'Abraham Movich',
-        picture: ''
+        name: 'Benjamin Movich',
+        picture: 'https://randomuser.me/api/portraits/men/32.jpg'
       },
       {
         name: 'Stephanie Espielle',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/women/65.jpg'
       },
       {
         name: 'Pierre Bernard',
-        picture: ''
+        picture: 'https://randomuser.me/api/portraits/men/43.jpg'
       }
     ],
-    date_debut: 'ABC',
-    date_fin: 'DEF'
+    date_debut: '03/05/2022',
+    date_fin: '08/05/2022'
   },
 ]

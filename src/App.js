@@ -20,7 +20,7 @@ function App() {
     <AppContext.Provider value={{ userProfile, setUserProfile }}>
       <div className='flex'>
         <Navbar />
-        <div className='flex-1'>
+        <div className='flex-1 px-12'>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
