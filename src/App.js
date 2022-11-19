@@ -15,9 +15,16 @@ function App() {
     userEmail: 'gziong@afrontetmoi.fr', 
     userPosition: 'Responsable RH' 
   })
+  const [newSessionData, setNewSessionData] = useState({
+    sessionName: "",
+    participants: "",
+    beginDate: "",
+    endDate: ""
+  })
+  const [addedNewSession, setAddedNewSession] = useState(false)
 
   return (
-    <AppContext.Provider value={{ userProfile, setUserProfile }}>
+    <AppContext.Provider value={{ userProfile, setUserProfile, newSessionData, setNewSessionData, addedNewSession, setAddedNewSession }}>
       <div className='flex'>
         <Navbar />
         <div className='flex-1 px-12'>

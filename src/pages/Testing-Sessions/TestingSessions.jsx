@@ -3,25 +3,14 @@ import { COLOR } from '../../assets/colors/constant.colors';
 import './TestingSessions.styles.css';
 import { sessionsData } from './Sessions.data';
 import Session from './Session';
-import Modal from 'react-modal';
+import AddSessionModal from '../../components/AddSessionModal/AddSessionModal';
 import { useState } from 'react';
 
+
 const TestingSessions = () => {
-  const [openModal, setOpenModal] = useState(false)
-  const sessionInputLabels = ["Nom de session", "Participants"];
-  const sessionDateLabels = ["Date de début", "Date de fin"]
-  const buttonStyle = "rounded-lg p-[15px] bg-[#7480da] text-[#FFF] my-5"
-  const modalStyle = {
-    content: {
-      width: '50%',
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
+  const [openModal, setOpenModal] = useState(false);
+  const buttonStyle = "rounded-lg p-[15px] bg-[#7480da] text-[#FFF] my-5";
+  // const { newSessionData, setNewSessionData, addedNewSession, setAddedNewSession } = useContext(AppContext);
 
   const onCloseModal = () => {
     setOpenModal(false)
@@ -55,33 +44,12 @@ const TestingSessions = () => {
         )}
         </tbody>
       </table>
-      <Modal
-        isOpen={openModal}
-        // onAfterOpen={afterOpenModal}
-        onRequestClose={onCloseModal}
-        style={modalStyle}
-        contentLabel="Example Modal"
-      >
-        <div className='flex justify-between mb-6'>
-          <h2 className='text-lg'>Ajouter une session</h2>
-          <button className='text-lg' onClick={onCloseModal}>X</button>
-        </div>
-        <form className=''>
-          { sessionInputLabels.map(sessionName => 
-              <div className='flex flex-col my-4'>
-                <label className='my-2'>{sessionName} :</label>
-                <input placeholder={sessionName} className='border border-stone-500 p-2 rounded w-full'/>
-              </div>  
-          )}
-          { sessionDateLabels.map(sessionName => 
-              <div className='flex flex-col my-4'>
-                <label className='my-2'>{sessionName} :</label>
-               
-              </div>  
-          )}
-          <input className={`${buttonStyle} w-60 cursor-pointer`} type="submit" value="Ajouter" />
-        </form>
-      </Modal>
+      <AddSessionModal 
+        key={1}
+        openModalValue={openModal} 
+        onCloseModal={onCloseModal} 
+        buttonStyle={buttonStyle} 
+      />
     </div>
   )
 }
